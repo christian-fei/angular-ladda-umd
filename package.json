@@ -1,6 +1,6 @@
 {
   "name": "angular-ladda-umd",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/angular-ladda-umd.min.js",
   "scripts": {
@@ -16,5 +16,8 @@
     "gulp-umd": "^0.2.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "ladda": "^0.9.8"
   }
 }

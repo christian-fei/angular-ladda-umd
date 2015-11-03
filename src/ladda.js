@@ -1,5 +1,7 @@
 'use strict'
 
+var Ladda = require('ladda')
+
 module.exports = [function(){
   return {
     restrict: 'A',
