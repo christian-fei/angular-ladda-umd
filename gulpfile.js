@@ -17,6 +17,15 @@ gulp.task('build', function() {
     .pipe(umd({
       exports: function(file) {return 'AngularRequestLoading'},
       namespace: function(file) {return 'AngularRequestLoading'},
+      dependencies: function(file){
+        return [{
+          name: 'Ladda',
+          amd: 'Ladda',
+          cjs: 'Ladda',
+          global: 'Ladda',
+          param: 'Ladda'
+        }]
+      }
     }))
     .pipe(buffer())
     .pipe(uglify())
