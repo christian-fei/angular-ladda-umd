@@ -1,6 +1,6 @@
 {
   "name": "angular-ladda-umd",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "main": "dist/angular-ladda-umd.min.js",
   "scripts": {

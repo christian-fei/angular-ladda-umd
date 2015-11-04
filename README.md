@@ -1,42 +1,21 @@
 angular-ladda-umd
 =======================
 
-[![Build Status](https://travis-ci.org/christian-fei/angular-ladda-umd.svg)](https://travis-ci.org/christian-fei/angular-ladda-umd)
-
 ```
 npm install --save angular-ladda-umd
 ```
 
-Sets a `loading` property on the `$rootScope` to show a loader
-while resource are being fetched.
-
-# Example integration
-
 ```
-angular.module('app', ['angular-ladda-umd'])
-.config(function($httpProvider){
-  $httpProvider.interceptors.push('LoadingRequestInterceptor')
-})
+<button class="btn btn-submit" ladda="vm.loading" ng-disabled="!vm.form.$valid" data-style="expand-right" type="submit">
+  {{'signup' | translate}}
+</button>
 ```
 
-and in your views you can use it like this:
+Notice that we bound the `ladda` property to an angular expression (`vm.loading`), which is toggled in the controller with
+true or false values to show or hide the loader.
 
-```
-<loader loading="loadingRequest"/>
-```
 
-# Configuration
-
-You can configure the module by injecting `LoadingRequestInterceptorProvider`
-in the config phase:
-
-```
-angular.module('app', ['angular-ladda-umd'])
-.config(function($httpProvider, LoadingRequestInterceptorProvider){
-  LoadingRequestInterceptorProvider.setPrefix('loadingRequest')
-  $httpProvider.interceptors.push('LoadingRequestInterceptor')
-})
-```
+All the options regarding style and ladda configuration remain intact, please refer to the official documentation.
 
 # UMD
 
